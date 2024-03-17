@@ -1,0 +1,445 @@
+/* CSS */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/* arrow */
+/* Style for the scroll-to-top button */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 24px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #358fe9;
+}
+
+#scrollToTopBtn.active {
+  transform: scale(1.1);
+}
+
+/* hrader */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #358fe9;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 1000; /* Ensure the header appears above other content */
+  }
+  
+  /* Add styles for the sticky title */
+  .sticky-title {
+    margin-top: 60px; /* Adjust this value to make space for the sticky header */
+  }
+
+.hed {
+    background-color: #2c3136a2;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #d1d1d1;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    align-items: center;
+    padding: 30px;
+    position: relative; /* Add position relative for pseudo-element positioning */
+}
+
+nav a:hover {
+    color: #0080ff; /* Text color on hover */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 50%; /* Adjust this value to move the starting point of the underline */
+    transform: translateX(-50%); /* Center the underline */
+    width: 0; /* Initially set width to 0 */
+    height: 2px; /* Height of the underline */
+    background: linear-gradient(to right, #0080ff 0%, #0080ff 50%, transparent 50%); /* Gradient for the underline */
+    background-size: 200% 100%; /* Adjust the size of the gradient to cover only half of the link width */
+    transition: background-position 0.3s ease, width 0.3s ease; /* Add transition for smooth effect */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+    background-position: 0 0; /* Move the background position to reveal the whole gradient */
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    width: 23%;
+    height: 23%;
+}
+
+.home {
+    margin-top: 60px;
+}
+
+.home h1 {
+    color: #358fe9;
+    font-size: 80px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-align: center;
+}
+
+.outlined-text {
+    text-shadow: 
+        -1px -1px 0 #040303,  
+        2px -1px 0 #0b0a0a,
+        -1px 2px 0 #0d0d0d,
+        1px 1px 0 #060606;
+}
+
+.about {
+    margin-top: 100px;
+}
+
+.about h1 {
+    font-size: 60px;
+    font-family: Times, Times New Roman, serif;
+    text-align: center;
+}
+
+.description {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.description p {
+    font-size: 22px;
+    font-family: Times, Times New Roman, serif;
+    display: inline-block;
+    text-align: justify;
+}
+
+.product {
+    background: #58a1eb;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.product .prdtitle h1 {
+    font-size: 55px;
+    font-family: Times, Times New Roman, serif;
+    text-align: center;
+}
+
+.product .prdlist {
+    display: flex; /* Change display to flex */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center; /* Center the items horizontally */
+  }
+  
+  .product .prdlist .product-item {
+    width: 25%; /* Adjust width as needed */
+    margin: 10px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 350px;
+    height: 300px; /* Set a fixed height for all product items */
+  }
+  
+  .product .prdlist .product-item:hover {
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product .prdlist .product-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product .prdlist .product-item h2,
+  .product .prdlist .product-item p {
+    transition: color 0.3s ease; 
+  }
+  
+  .product .prdlist .product-item h2,
+  .product .prdlist .product-item p {
+    margin: 5px 0; /* Adjust margin as needed */
+  }
+  
+  .ice,
+  .shri {
+    text-align: center;
+    margin-top: 40px; /* Add some space between the sections */
+  }
+  
+  .ice h2,
+  .shri h2 {
+    font-size: 35px; /* Adjust the font size as needed */
+    font-family: Arial, sans-serif; /* Specify the font family */
+    color: #333; /* Change the text color if needed */
+  }
+  
+  .video-title {
+    font-size: 50px;
+    font-family: Times, Times New Roman, serif;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.video-item {
+    flex: 0 1 auto;
+    border: 3px solid #000000; /* Adjust the border width and color as needed */
+    border-radius: 10px; /* Adjust the border radius value as needed */
+    overflow: hidden;
+}
+
+/* mapss */
+.location {
+    margin-top: 100px;
+    background: #56a4f2;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.location-title {
+    font-size: 50px;
+    font-family: Times, Times New Roman, serif;
+    text-align: center;
+
+}
+
+.location-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.location-item {
+    flex: 0 1 auto;
+    border: 2px solid black; /* Adjust the border width and color as needed */
+    border-radius: 10px; /* Adjust the border radius value as needed */
+    overflow: hidden;
+}
+
+.contact {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.contact-title h1 {
+    font-size: 40px;
+    color: #358fe9;
+    font-family: Arial, sans-serif;
+}
+
+.contact-info {
+    margin-top: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+  .contact-info p span {
+    font-weight: bold;
+  }
+
+
+.fot {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+/* animation */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+
+  .fade-in.active {
+    opacity: 1;
+  }
+
+  /* hovers  */
+
+  .product-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .product-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .product-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .product-details h2 {
+    margin: 5px 0;
+  }
+
+  .product-details table {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .product-details th,
+  .product-details td {
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .product-details th {
+    font-weight: bold;
+  }
+
+  .product-item:hover .product-details {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 740px) {
+    /* Center header text */
+    header {
+      text-align: center;
+    }
+  
+    /* Flex layout for navigation items */
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    /* Add margin to navigation items */
+    nav ul li {
+      margin: 10px;
+    }
+  
+    /* Ensure images scale properly */
+    main img {
+      width: 250px;
+      height: 250px;
+    }
+  
+    /* Adjust font size of description */
+    .description p {
+      font-size: 16px;
+    }
+  
+    /* Set product item width and height */
+    .product-item {
+      width: 100%;
+
+    }
+  
+    /* Center product details */
+    .product-details {
+      text-align: center;
+    }
+  
+    /* Center product details table */
+    .product-details table {
+      margin: auto;
+    }
+  
+    /* Adjust font size of contact info */
+    .contact-info {
+      font-size: 16px;
+    }
+  
+    /* Arrange photo, map, and video in one column */
+    .video-container,
+    .location-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    /* Set iframe max width */
+    .video-item iframe,
+    .location-item iframe {
+      max-width: 100%;
+    }
+  }
+  
